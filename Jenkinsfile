@@ -7,5 +7,10 @@ pipeline {
         fileExists 'README.md'
       }
     }
+    stage('Unittest') {
+      steps {
+        sh 'tox'
+      }
+    }
   }
 }
